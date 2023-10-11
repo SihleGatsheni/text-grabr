@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 
 const Carousel = ({ images }) => {
@@ -15,13 +14,10 @@ const Carousel = ({ images }) => {
   return (
     <div className="carousel">
       <div className="slides">
-        {images.map((image, index) => (
           <div
-            key={index}
-            className={`slide ${index === currentSlide ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${image})` }}
+            className={`slide ${currentSlide >=0 ? 'active' : ''}`}
+            style={{ backgroundImage: `url(${images[currentSlide]})` }}
           />
-        ))}
       </div>
       <button className="prev-btn" onClick={handlePrevSlide}>
         &lt;

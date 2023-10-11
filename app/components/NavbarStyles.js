@@ -55,3 +55,10 @@ export const Hamburger = styled.div`
     font-size: 1.5rem;
   }
 `;
+export const AboutLink = styled.a`
+  // Define your styles for the "About" link here.
+  text-decoration: none; // For example, remove underline.
+  margin-right: 20px; // Adjust the margin to align it to the right.
+  color: #333; // Change the text color as needed.
+  // Add any other styles you want.
+`;

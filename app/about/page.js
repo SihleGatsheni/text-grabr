@@ -1,6 +1,7 @@
 'use client';
-import React,{useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from '../components/Carousel';
+import Footer from '../components/Footer';
 
 const Profile = () => {
   const [showCard, setShowCard] = useState(false);
@@ -42,13 +43,27 @@ const Profile = () => {
   ];
 
 
-  const toolsImages = 
-  [
-    "/skete.jpeg",
-    "/profile.jpg",
-    "/pos.png",
-    "/accomodation.jpg",
-  ];
+  const toolsImages =
+    [
+      'tools/android.jpeg',
+      'tools/C#.png',
+      'tools/cicd.png',
+      'tools/docker.png',
+      'tools/databases.png',
+      'tools/dotnet.png',
+      'tools/drawio.png',
+      'tools/dsa.png',
+      'tools/fullvs.png',
+      'tools/git-github.png',
+      'tools/golang.png',
+      'tools/Java.png',
+      'tools/nextjs.png',
+      'tools/pgadmin.png',
+      'tools/postman.png',
+      'tools/rider.jpeg',
+      'tools/ssms.png',
+      'tools/vscode.png',
+    ];
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -66,18 +81,17 @@ const Profile = () => {
             <img
               src="/linkedin-icon.png" // Replace with the actual LinkedIn icon URL
               alt="LinkedIn"
-              className="w-6 h-6"
+              className="w-9 h-9"
             />
           </a>
-          {/* Add more social links here */}
         </div>
       </div>
 
       {/* About Developer */}
       <div className="text-center mb-8">
-      <div className={`description-card ${showCard ? 'show' : ''}`}>
-        <h2 className="description-title">Professional Summary</h2>
-        <p className="description-text">
+        <div className={`description-card ${showCard ? 'show' : ''}`}>
+          <h2 className="description-title">Professional Summary</h2>
+          <p className="description-text">
             Highly skilled backend/full-stack developer with expertise in C#,
             ASP.NET MVC, Microsoft SQL Server, and Web API. Proficient in Docker containerization,
             Git, and GitHub for version control and collaboration.
@@ -85,15 +99,14 @@ const Profile = () => {
             Experienced in React.js and Next.js for frontend development, delivering responsive user interfaces.
             Proactive problem-solver with a passion for staying up-to-date with the latest technologies.
             Adaptable team player committed to delivering high-quality solutions.
-        </p>
-      </div>
+          </p>
+        </div>
       </div>
 
-      {/* Completed Projects */}
       <div className="overflow-x-auto mb-8">
-        <div className="flex space-x-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {completedProjects.map((project, index) => (
-            <div key={index} className="w-64 bg-white overflow-hidden shadow-lg">
+            <div key={index} className="bg-white overflow-hidden shadow-lg">
               <img src={project.imageUrl} alt={project.title} className="w-full h-40 object-cover" />
               <div className="p-4">
                 <h2 className="text-xl font-semibold text-blue-600 mb-2">{project.title}</h2>
@@ -111,8 +124,8 @@ const Profile = () => {
           ))}
         </div>
       </div>
-      <h2 className='text-center text-blue-600 mb-10'>Tools I Am Familiar With</h2>
-      <Carousel images={toolsImages} />
+      {/* <h2 className='text-center text-blue-600 mb-10'>Software stacks and tools I am familiar with</h2>
+      <Carousel images={toolsImages} /> */}
     </div>
   );
 };
