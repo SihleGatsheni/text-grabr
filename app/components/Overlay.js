@@ -78,7 +78,7 @@ const Overlay = () => {
         const formData = new FormData();
         formData.append('file', imageSrc);
         try {
-          const response = await fetch('http://ec2-13-245-136-237.af-south-1.compute.amazonaws.com/api/v1/extract-text', {
+          const response = await fetch('http://ec2-13-244-66-79.af-south-1.compute.amazonaws.com/api/v1/extract-text', {
             method: 'POST',
             body: formData,
           });
