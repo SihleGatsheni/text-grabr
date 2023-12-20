@@ -78,14 +78,14 @@ const Overlay = () => {
         const formData = new FormData();
         formData.append('file', imageSrc);
         try {
-          const response = await fetch('https://tamworth-dugong-xkdg.2.sg-1.fl0.io/api/v1/extract-text', {
+          const response = await fetch('http://ec2-13-245-136-237.af-south-1.compute.amazonaws.com/api/v1/extract-text', {
             method: 'POST',
             body: formData,
           });
     
           if (response.ok) {
             const data = await response.json();
-           setExtractedText(data.Text);
+           setExtractedText(data.text);
           } else {
             setErrorMessage( await response.text());
           }
