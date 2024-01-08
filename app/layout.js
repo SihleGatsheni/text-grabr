@@ -13,9 +13,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
-      </head>
       <body className={inter.className}>
       <Navbar/>
         {children}
